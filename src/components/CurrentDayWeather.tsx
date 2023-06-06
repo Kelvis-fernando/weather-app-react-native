@@ -1,4 +1,4 @@
-import { Surface, Box, Flex, Text } from "@react-native-material/core";
+import { Surface, Box, Flex, Text, Icon } from "@react-native-material/core";
 
 const CurrentDayWeather = () => {
   return (
@@ -32,9 +32,15 @@ const CurrentDayWeather = () => {
         <Flex direction="row" justify="around" mt={5}>
           <Text style={{ fontSize: 22 }} color="white">
             22
+            <Icon name="arrow-up-bold" color="white" style={{ fontSize: 22 }} />
           </Text>
           <Text style={{ fontSize: 22 }} color="white">
             30
+            <Icon
+              name="arrow-down-bold"
+              color="white"
+              style={{ fontSize: 22 }}
+            />
           </Text>
         </Flex>
         <Flex mt={10}>
@@ -43,6 +49,7 @@ const CurrentDayWeather = () => {
               Humidity
             </Text>
             <Text style={{ fontSize: 22 }} color="white">
+              <Icon name="water" color="white" style={{ fontSize: 22 }} />
               63%
             </Text>
           </Flex>
@@ -51,6 +58,7 @@ const CurrentDayWeather = () => {
               Wind
             </Text>
             <Text style={{ fontSize: 22 }} color="white">
+              <Icon name="weather-windy-variant" color="white" style={{ fontSize: 22 }} />
               5kph
             </Text>
           </Flex>
@@ -59,6 +67,7 @@ const CurrentDayWeather = () => {
               Pressure
             </Text>
             <Text style={{ fontSize: 22 }} color="white">
+              <Icon name="pan" color="white" style={{ fontSize: 22 }} />
               1019hPa%
             </Text>
           </Flex>
