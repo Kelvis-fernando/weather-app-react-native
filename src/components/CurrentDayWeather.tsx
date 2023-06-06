@@ -17,12 +17,13 @@ const CurrentDayWeather = () => {
 
       <Box>
         <Flex>
-          <Text style={{ fontSize: 26 }} color="white">
+          <Text style={{ fontSize: 50 }} color="white">
             23
+            <Icon name="weather-sunny" color="white" style={{ fontSize: 50 }} />
           </Text>
         </Flex>
         <Text style={{ fontSize: 26 }} color="white">
-          clear sky
+          Clear sky
         </Text>
       </Box>
       <Box mt={20}>
@@ -58,7 +59,11 @@ const CurrentDayWeather = () => {
               Wind
             </Text>
             <Text style={{ fontSize: 22 }} color="white">
-              <Icon name="weather-windy-variant" color="white" style={{ fontSize: 22 }} />
+              <Icon
+                name="weather-windy-variant"
+                color="white"
+                style={{ fontSize: 22 }}
+              />
               5kph
             </Text>
           </Flex>
