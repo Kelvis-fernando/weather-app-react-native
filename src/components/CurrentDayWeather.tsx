@@ -1,13 +1,29 @@
 import { Surface, Box, Flex, Text, Icon } from "@react-native-material/core";
+import { weatherService } from "../services/weatherService";
+import { useEffect, useState } from "react";
+
+interface WeatherInfoTypes {
+  weather: [{}];
+}
 
 const CurrentDayWeather = () => {
+  const [weatherInfo, setWeatherInfo] = useState<any>();
+  const getData = async () => {
+    const apiResponse = await weatherService();
+    setWeatherInfo(apiResponse);
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <Surface
       elevation={5}
       category="medium"
       style={{
         width: "90%",
-        backgroundColor: "#051a33",
+        backgroundColor: "#031429",
         padding: 20,
       }}
     >
@@ -17,8 +33,8 @@ const CurrentDayWeather = () => {
 
       <Box>
         <Flex>
-          <Text style={{ fontSize: 50 }} color="white">
-            23
+          <Text style={{ fontSize: 24 }} color="white">
+            {/* {weatherInfo!.weather[0].description} */}
             <Icon name="weather-sunny" color="white" style={{ fontSize: 50 }} />
           </Text>
         </Flex>

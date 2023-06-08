@@ -8,7 +8,7 @@ const ExtendedForecast = () => {
       category="medium"
       style={{
         width: "90%",
-        backgroundColor: "#051a33",
+        backgroundColor: "#031429",
         padding: 20,
         marginTop: 30,
       }}
