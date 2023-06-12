@@ -1,22 +1,10 @@
 import { Surface, Box, Flex, Text, Icon } from "@react-native-material/core";
-import { weatherService } from "../services/weatherService";
-import { useEffect, useState } from "react";
 
 interface WeatherInfoTypes {
   weather: [{}];
 }
 
 const CurrentDayWeather = () => {
-  const [weatherInfo, setWeatherInfo] = useState<any>();
-  const getData = async () => {
-    const apiResponse = await weatherService();
-    setWeatherInfo(apiResponse);
-  };
-
-  useEffect(() => {
-    getData();
-  }, []);
-
   return (
     <Surface
       elevation={5}
